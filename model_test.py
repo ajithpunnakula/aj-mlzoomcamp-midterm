@@ -23,10 +23,10 @@ with open("./outputs/best_model.pkl", "rb") as model_file:
 
 # Fill missing values in test set using the same statistics from training set
 for col in df_test.select_dtypes(include=[np.number]):  
-    df_test[col].fillna(df_test[col].mean(), inplace=True)  
+    df_test[col] = df_test[col].fillna(df_test[col].mean())  
   
 for col in df_test.select_dtypes(exclude=[np.number]):  
-    df_test[col].fillna(df_test[col].mode()[0], inplace=True)  
+    df_test[col] = df_test[col].fillna(df_test[col].mode()[0]) 
 
 # Apply the DictVectorizer to encode categorical features in the test dataset  
 df_test_encoded = dv.transform(df_test.to_dict(orient='records'))  
