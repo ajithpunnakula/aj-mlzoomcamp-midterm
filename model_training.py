@@ -8,7 +8,7 @@ import joblib
 import pickle
 
 # Load the dataset
-df_train = pd.read_csv('./inputes/train.csv')
+df_train = pd.read_csv('./inputs/train.csv')
 
 # Clean column names by removing spaces and converting to lowercase
 df_train.columns = df_train.columns.str.replace(' ', '_').str.lower()

@@ -5,7 +5,7 @@ import pickle
 import joblib  
 from sklearn.feature_extraction import DictVectorizer
 # Load the test dataset
-df_test = pd.read_csv('./inputes/test.csv')
+df_test = pd.read_csv('./inputs/test.csv')
 
 # Clean column names similarly to how it's done in df_train
 df_test.columns = df_test.columns.str.replace(' ', '_').str.lower()
