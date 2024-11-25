@@ -13,6 +13,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the FastAPI app into the container
 COPY app.py .
 
+# Copy the model into the container
+COPY outputs/best_model.pkl outputs/best_model.pkl
+COPY outputs/dropped_columns.pkl outputs/dropped_columns.pkl
+COPY outputs/dv.joblib outputs/dv.joblib
+
 # Expose the port FastAPI will run on
 EXPOSE 8000
 
