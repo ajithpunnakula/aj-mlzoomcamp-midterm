@@ -88,7 +88,7 @@ plt.show()
 df_train['saleprice'] = np.log1p(df_train['saleprice'])
 
 # save the cleaned dataset
-df_train.to_csv('./outputs/cleaned_training_dataset.csv', index=False)
+# df_train.to_csv('./outputs/cleaned_training_dataset.csv', index=False)
 
 # %%
 import pandas as pd
